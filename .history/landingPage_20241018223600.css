@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #0b9586;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f0a500;
+  }
+  
+  /* Hide the checkbox */
+  #toggle-menu {
+    display: none;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      right: 0;
+      height: 100vh;
+      top: 0;
+      background-color: #333;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      display: none;
+    }
+  
+    .nav-links li {
+      margin: 20px 0;
+    }
+  
+    /* Show hamburger menu */
+    .hamburger {
+      display: flex;
+    }
+  
+    /* Toggle the navigation links when the checkbox is checked */
+    #toggle-menu:checked + .hamburger + .nav-links {
+      display: flex;
+    }
+  }
+  
